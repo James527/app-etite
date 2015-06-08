@@ -69,27 +69,6 @@ alejandra = User.new({
 alejandra.save
 
 
-<<<<<<< HEAD
-#Lunch seeds
-lunch_list = [
-  [ "Home Slice Pizza", 0, 1],
-  [ "Perry\'s Steakhouse", 0, 2],
-  [ "Petares Burgers", 0, 3],
-  [ "Torchy\'s tacos", 0, 4],
-  [ "Hopddody Burgers", 0, 5],
-  [ "Magnolia Cafe South", 0, 1],
-  [ "Opal Divine\'s Penn Field", 0, 20],
-  [ "Doc\'s", 0, 17],
-  [ "Lucy\'s Fried Chicken", 0, 18],
-  [ "El Borrego De Oro", 0, 11],
-  [ "Hill\'s Cafe", 0, 10],
-  [ "Little Barrel And Brown", 0, 13]
-]
-
-lunch_list.each do |name, rank, user_id|
-  Lunch.create( name: name, rank: rank, user_id: username )
-end
-=======
 Lunch.new([
     {
     :food_type => "Home Slice Pizza",
@@ -218,4 +197,3 @@ Comment.new([
     }
   ])
 comment.save
->>>>>>> 4aff5058071110ec81e02e8706039e2a06b0c4e3

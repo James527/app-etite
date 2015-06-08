@@ -1,1 +1,34 @@
-lunches index here
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rank</th>
+      <th>lunch Type</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lunchs.each do |lunch| %>
+      <tr>
+        <td><%= lunch.name %></td>
+        <td><%= lunch.rank %></td>
+        <td><%= lunch.lunch_type %></td>
+        <td><%= @user_id %></td>
+        <td><%= link_to 'Show', lunch %></td>
+        <td><%= link_to 'Edit', edit_lunch_path(lunch) %></td>
+        <td><%= link_to 'Destroy', lunch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New lunch', new_lunch_path %>

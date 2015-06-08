@@ -1,1 +1,29 @@
-show lunches page here
+<p id="notice"><%= @lunch.inspect %></p> 
+
+	<p id="notice"><%= notice %></p>
+
+	<strong>Name:</strong>
+	<%= @lunch.name %>
+</p>
+
+<p>
+	<strong>Rank:</strong>
+	<%= @lunch.Rank %>
+</p>
+
+<p>
+	<strong>lunch_type:</strong>
+	<%= @lunch.lunch_type %>
+</p>
+<p>
+	<strong>abv:</strong>
+	<%= @beer.abv %>
+</p>
+<p>
+	<strong>User:</strong>
+	<%= @user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_beer_path(@beer) %> |
+<%= link_to 'Show List', beers_path %> | 

@@ -28,22 +28,30 @@ end
 
 def update
   @lunch = Lunch.find(params[:id])
- 
+  respond_to do |format|
   if @lunch.update(lunch_params)
+    format.html { redirect_to @lunch, notice: 'Lunch was successfully updated.'}
+    format.json { render :show, status: :ok, location: @lunch }
     redirect_to @lunch
   else
+    format.html {render :edit}
+    format.json {render json: @lunch.errors, status: :unprocessable_entity }
     render 'edit'
   end
 end
 
 def destroy
-  @lunch = Lunch.find(params[:id])
-  @lunch.destroy
- 
-  redirect_to lunches_path
+ @lunch.destroy
+    respond_to do |format|
+     format.html { redirect_to lunches_url, notice: 'Lunch was successfully destroyed.' }
+     format.json { head :no_content }
 end
  
 private
+def set_lunch
+  @lunch = Lunch.find(params[:id])
+end
+
   def lunch_params
     params.require(:lunch).permit(:food_type, :rank, :user_id)
   end

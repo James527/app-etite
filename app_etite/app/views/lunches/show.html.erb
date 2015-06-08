@@ -8,7 +8,7 @@
 
 <p>
 	<strong>Rank:</strong>
-	<%= @lunch.Rank %>
+	<%= @lunch.rank %>
 </p>
 
 <p>
@@ -16,14 +16,10 @@
 	<%= @lunch.lunch_type %>
 </p>
 <p>
-	<strong>abv:</strong>
-	<%= @beer.abv %>
-</p>
-<p>
 	<strong>User:</strong>
 	<%= @user_id %>
 </p>
 
 
-<%= link_to 'Edit', edit_beer_path(@beer) %> |
-<%= link_to 'Show List', beers_path %> | 
+<%= link_to 'Edit', edit_lunch_path(@lunch) %> |
+<%= link_to 'Show List', lunches_path %> | 

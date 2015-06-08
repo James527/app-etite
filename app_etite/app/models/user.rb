@@ -2,6 +2,7 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
 	has_many :lunches
+	has_many :comments, through :lunches 
 
 	# to access :password within the user instance
 	attr_accessor :password_new

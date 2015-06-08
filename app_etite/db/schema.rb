@@ -11,9 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150608190924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "comments", force: :cascade do |t|
+    t.string  "text",    null: false
+    t.integer "user_id"
+  end
+
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+
+  create_table "lunches", force: :cascade do |t|
+    t.string   "food_type",  null: false
+    t.integer  "rank",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  add_index "lunches", ["food_type"], name: "index_lunches_on_food_type", using: :btree
+  add_index "lunches", ["user_id"], name: "index_lunches_on_user_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username",      null: false
+    t.string   "email",         null: false
+    t.string   "password_hash", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "users", ["username"], name: "index_users_on_username", using: :btree
+
+  add_foreign_key "comments", "users"
+  add_foreign_key "lunches", "users"
 end

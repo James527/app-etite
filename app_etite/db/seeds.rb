@@ -86,5 +86,5 @@ lunch_list = [
 ]
 
 lunch_list.each do |name, rank, user_id|
-  Lunch.create( name: name, rank: rank, user_id: username )
+  ( name: name, rank: rank, user_id: username )
 end

@@ -45,7 +45,7 @@ def destroy
     respond_to do |format|
      format.html { redirect_to lunches_url, notice: 'Lunch was successfully destroyed.' }
      format.json { head :no_content }
-end
+  end
  
 private
 def set_lunch
@@ -56,4 +56,6 @@ end
     params.require(:lunch).permit(:food_type, :rank, :user_id)
   end
 
+end
+end
 end

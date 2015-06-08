@@ -68,58 +68,143 @@ alejandra = User.new({
     })
 alejandra.save
 
-
-Lunch.new([
-    {
+#Lunch seeds
+lunch = Lunch.new({
     :food_type => "Home Slice Pizza",
     :rank => 0,
     :user_id => 1
-    },
+    })
+lunch.save
 
-    { :food_type =>  "Perry\'s Steakhouse",
+lunch = Lunch.new({
+    :food_type =>  "Perry\'s Steakhouse",
     :rank => 0,
     :user_id => 6
-    },
-    
-    { :food_type => "Petares Burgers",
+    })
+lunch.save
+
+lunch = Lunch.new({
+    :food_type => "Petares Burgers",
     :rank => 0,
     :user_id => 7
-    },
-    
-    { :food_type => "Torchy\'s tacos",
+    })
+lunch.save
+
+lunch = Lunch.new({
+    :food_type => "Torchy\'s tacos",
     :rank => 0,
     :user_id => 1
-    },
-    
-    { :food_type => "Hopddody Burgers",
+    })
+lunch.save
+
+lunch = Lunch.new({
+    :food_type => "Hopddody Burgers",
     :rank => 0,
     :user_id => 3
-    },
-    
-    { :food_type => "Magnolia Cafe South",
+    })
+lunch.save
+
+lunch = Lunch.new({
+    :food_type => "Magnolia Cafe South",
     :rank => 0,
     :user_id => 9
-    },
+    })
+lunch.save
 
-    { :food_type => "Opal Divine\'s Penn Field",
+lunch = Lunch.new({
+    :food_type => "Opal Divine\'s Penn Field",
     :rank => 0,
     :user_id => 8
-    },
+    })
+lunch.save
 
-    { :food_type => "Doc\'s",
+lunch = Lunch.new({
+    :food_type => "Doc\'s",
     :rank => 0,
     :user_id => 11
-    },
+    })
+lunch.save
 
-    { :food_type => "Lucy\'s Fried Chicken",
+lunch = Lunch.new({
+    :food_type => "Lucy\'s Fried Chicken",
     :rank => 0,
     :user_id => 7
-    },
+    })
+lunch.save
 
-    { :food_type => "El Borrego De Oro",
+lunch = Lunch.new({
+    :food_type => "El Borrego De Oro",
     :rank => 0,
     :user_id => 10
-    }, 
+    })
+lunch.save
+
+lunch = Lunch.new({
+    :food_type => "Hill\'s Cafe",
+    :rank => 0,
+    :user_id => 2
+    })
+lunch.save
+
+lunch = Lunch.new({
+    :food_type => "Little Barrel And Brown",
+    :rank => 0,
+    :user_id => 5,
+    })
+lunch.save
+
+
+# Lunch.new([
+#     {
+#     :food_type => "Home Slice Pizza",
+#     :rank => 0,
+#     :user_id => 1
+#     },
+
+    # { :food_type =>  "Perry\'s Steakhouse",
+    # :rank => 0,
+    # :user_id => 6
+    # },
+    
+    # { :food_type => "Petares Burgers",
+    # :rank => 0,
+    # :user_id => 7
+    # },
+    
+    # { :food_type => "Torchy\'s tacos",
+    # :rank => 0,
+    # :user_id => 1
+    # },
+    
+    # { :food_type => "Hopddody Burgers",
+    # :rank => 0,
+    # :user_id => 3
+    # },
+    
+    # { :food_type => "Magnolia Cafe South",
+    # :rank => 0,
+    # :user_id => 9
+    # },
+
+    # { :food_type => "Opal Divine\'s Penn Field",
+    # :rank => 0,
+    # :user_id => 8
+    # },
+
+    # { :food_type => "Doc\'s",
+    # :rank => 0,
+    # :user_id => 11
+    # },
+
+    # { :food_type => "Lucy\'s Fried Chicken",
+    # :rank => 0,
+    # :user_id => 7
+    # },
+
+    # { :food_type => "El Borrego De Oro",
+    # :rank => 0,
+    # :user_id => 10
+    # }, 
 
     { :food_type => "Hill\'s Cafe",
     :rank => 0,
@@ -128,8 +213,7 @@ Lunch.new([
 
     { :food_type => "Little Barrel And Brown",
     :rank => 0,
-    :user_id => 5
-    :comment_id => 
+    :user_id => 5,
     }
     ])
 lunch.save

@@ -129,7 +129,6 @@ Lunch.new([
     { :food_type => "Little Barrel And Brown",
     :rank => 0,
     :user_id => 5
-    :comment_id => 
     }
     ])
 lunch.save
@@ -197,4 +196,3 @@ Comment.new([
     }
   ])
 comment.save
->>>>>>> 4aff5058071110ec81e02e8706039e2a06b0c4e3

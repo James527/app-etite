@@ -1,7 +1,7 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-	has_many :jokes
+	has_many :lunches
 
 	# to access :password within the user instance
 	attr_accessor :password_new

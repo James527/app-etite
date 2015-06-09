@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20150609192755) do
 
   create_table "comments", force: :cascade do |t|
     t.string  "text",     null: false
-    t.integer "user_id",  null: false
-    t.integer "lunch_id", null: false
+    t.integer "user_id"
+    t.integer "lunch_id"
   end
 
   add_index "comments", ["lunch_id"], name: "index_comments_on_lunch_id", using: :btree
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20150609192755) do
     t.integer  "rank",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id",    null: false
+    t.integer  "user_id"
   end
 
   add_index "lunches", ["food_type"], name: "index_lunches_on_food_type", using: :btree

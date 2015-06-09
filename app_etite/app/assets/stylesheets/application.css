@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+/*Header Settings*/
+ .container{
+    width: 100%;
+    background-size: cover;
+    padding: 0;
+}
+
+div.jumbotron {
+  background-color: #413839;
+}
+
+.titleimage {
+    border: .3em solid white;
+    width: 70%;
+}
+
+a {
+    color: #FFF8C6;
+}
+
+a:hover {
+    color: #4C4646;
+    background-color: #FFF8C6;
+}
+
+/*Body settings*/
+body {
+    background-color: #FFB02C;
+    color: #4C4646;
+    padding: 0;
+}
+
+div#bodyContent.container{
+    position: relative;
+    left: 3em;
+}

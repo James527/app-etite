@@ -14,20 +14,20 @@ james = User.new({
     })
 james.save
 al = User.new({
-    :username => "alwan88",
-    :email => "alwan88@email.com",
+    :username => "james527",
+    :email => "jamesrutledge@email.com",
     :password => "password"
     })
 al.save
 courtney = User.new({
-    :username => "cregensburger",
-    :email => "courtneyregensburger@email.com",
+    :username => "james527",
+    :email => "jamesrutledge@email.com",
     :password => "password"
     })
 courtney.save
 walker = User.new({
-    :username => "walkman",
-    :email => "walkerman@email.com",
+    :username => "james527",
+    :email => "jamesrutledge@email.com",
     :password => "password"
     })
 walker.save

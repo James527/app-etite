@@ -1,1 +1,1 @@
-json.extract! @lunch, :food_type, :rank, :created_at, :updated_at
+json show lunches page here

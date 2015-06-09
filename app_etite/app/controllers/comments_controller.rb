@@ -2,8 +2,8 @@ class CommentsController < ApplicationController
 	def create
 		@lunch = Lunch.find(params[:lunch_id])
 		@comment = 
-	@lunch.comments.create(comment_params)
-		redirect_to article_path(@lunch)
+		@lunch.comments.create(comment_params)
+		redirect_to lunch_path(@lunch)
 	end
 
 	private

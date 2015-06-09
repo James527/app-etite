@@ -20,6 +20,20 @@
 	<%=  %>
 </p>
 
+<h2>Comments</h2>
+<%= render @lunch.comments %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@lunch, @lunch.comments.build]) do |f| %>
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_field :text %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_lunch_path(@lunch) %> |
 <%= link_to 'Show List', lunches_path %> | 

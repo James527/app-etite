@@ -21,17 +21,16 @@
     padding: 0;
 }*/
 
-.jumbotron {
+.headerBG {
   background-color: #413839;
   padding-bottom: 0;
+  padding-top: 1em;
 }
 
-.titleimage {
-    background-image: url('../app_etite.png');
-    border: .3em solid white;
-    width: 75%;
+.carousel-inner {
+    width: 60%;
     background-color: #413839;
-    margin-left: 13%;
+    margin-left: 20%;
 }
 
 a {
@@ -54,7 +53,7 @@ body {
     padding: 0;
 }
 
-div#bodyContent.container{
+#bodyContent.container{
     position: relative;
     left: 3em;
 }

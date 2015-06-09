@@ -11,25 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608200024) do
+ActiveRecord::Schema.define(version: 201506082255424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.string "text", null: false
+    t.string  "text",     null: false
+    t.integer "lunch_id"
   end
+
+  add_index "comments", ["lunch_id"], name: "index_comments_on_lunch_id", using: :btree
 
   create_table "lunches", force: :cascade do |t|
     t.string   "food_type",  null: false
     t.integer  "rank",       null: false
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "lunches", ["food_type"], name: "index_lunches_on_food_type", using: :btree
+  add_index "lunches", ["user_id"], name: "index_lunches_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
+    t.string   "username",                            null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -46,5 +52,8 @@ ActiveRecord::Schema.define(version: 20150608200024) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", using: :btree
 
+  add_foreign_key "comments", "lunches"
+  add_foreign_key "lunches", "users"
 end

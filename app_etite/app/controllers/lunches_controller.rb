@@ -1,4 +1,6 @@
 class LunchesController < ApplicationController
+before_action :set_lunch, only: [:show, :edit, :update, :destroy]
+before_action :authenticate_user!
 
 def index
     @lunches = Lunch.all
@@ -53,7 +55,7 @@ def set_lunch
 end
 
   def lunch_params
-    params.require(:lunch).permit(:food_type, :rank, :user_id)
+    params.require(:lunch).permit(:food_type, :rank)
   end
 
 end

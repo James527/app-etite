@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<h1>Lunches</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Rank</th>
-      <th>lunch Type</th>
-      <th>User</th>
+      <th>Name |  </th>
+      <th> Rank |  </th>
+      <th> Lunch Type |  </th>
+      <th> User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,7 +16,7 @@
   <tbody>
     <% @lunches.each do |lunch| %>
       <tr>
-        <td><%= lunch.name %></td>
+        
         <td><%= lunch.rank %></td>
         <td><%= lunch.lunch_type %></td>
         <td><%= @user_id %></td>

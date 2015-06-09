@@ -14,20 +14,20 @@ james = User.new({
     })
 james.save
 al = User.new({
-    :username => "james527",
-    :email => "jamesrutledge@email.com",
+    :username => "alwanmo",
+    :email => "al@email.com",
     :password => "password"
     })
 al.save
 courtney = User.new({
-    :username => "james527",
-    :email => "jamesrutledge@email.com",
+    :username => "cregensburger",
+    :email => "cregensburger@email.com",
     :password => "password"
     })
 courtney.save
 walker = User.new({
-    :username => "james527",
-    :email => "jamesrutledge@email.com",
+    :username => "walker",
+    :email => "walker@email.com",
     :password => "password"
     })
 walker.save
@@ -114,7 +114,7 @@ lunch = Lunch.create({
 lunch = Lunch.create({
     :food_type => "Doc\'s",
     :rank => 0,
-    :user_id => 11
+    :user_id => 10
     })
 
 lunch = Lunch.create({
@@ -145,73 +145,73 @@ lunch = Lunch.create({
 #User comments about food
 
 comment = Comment.create({
-    :comment => "New York wishes it had this quality pizza.",
+    :text => "New York wishes it had this quality pizza.",
     :lunch_id => 1,
     :user_id => 1
     })
 
 comment = Comment.create({
-    :comment =>  "Always busy, so there is a bit of a wait, but definitely worth it!",
+    :text =>  "Always busy, so there is a bit of a wait, but definitely worth it!",
     :lunch_id => 2,
     :user_id => 6
     })
 
 comment = Comment.create({
-    :comment => "Perfect burgers, perfect serving size, perfect prices",
+    :text => "Perfect burgers, perfect serving size, perfect prices",
     :lunch_id => 3,
     :user_id => 7
     })
 
 comment = Comment.create({
-    :comment => "Best tacos in town.",
+    :text => "Best tacos in town.",
     :lunch_id => 4,
     :user_id => 1
     })
 
 comment = Comment.create({
-    :comment => "The house special was the best.",
+    :text => "The house special was the best.",
     :lunch_id => 5,
     :user_id => 3
     })
 
 comment = Comment.create({
-    :comment => "Really tasty tea, I will definitely be going here again.",
+    :text => "Really tasty tea, I will definitely be going here again.",
     :lunch_id => 6,
     :user_id => 9
     })
 
 comment = Comment.create({
-    :comment => "The french fries are the best in town",
+    :text => "The french fries are the best in town",
     :lunch_id => 7,
     :user_id => 8
     })
 
 comment = Comment.create({
-    :comment => "Awful service, awful food. Do not like.",
+    :text => "Awful service, awful food. Do not like.",
     :lunch_id => 8,
-    :user_id => 11
+    :user_id => 10
     })
 
 comment = Comment.create({
-    :comment => "I wish they had a really spicy fried chicken.",
+    :text => "I wish they had a really spicy fried chicken.",
     :lunch_id => 9,
     :user_id => 7
     })
 
 comment = Comment.create({
-    :comment => "Great service, but the tacos were disappointing.",
-    :lunch_id => 10,
+    :text => "Great service, but the tacos were disappointing.",
+    :lunch_id => 11,
     :user_id => 10
     })
 
 comment = Comment.create({
-    :comment => "Try the salad, it's so fresh",
-    :lunch_id => 11,
+    :text => "Try the salad, it's so fresh",
+    :lunch_id => 10,
     :user_id => 2
     })
 
 comment = Comment.create({
-    :comment => "Awesome beer here",
+    :text => "Awesome beer here",
     :lunch_id => 12,
     :user_id => 5
     })

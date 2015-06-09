@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   resources :lunches
   resources :users
+  
+  resources :votes do
+  member do
+    post 'upvote'
+  end
+end
 
   get 'profile' => 'users#show'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -15,19 +15,23 @@
  */
 
 /*Header Settings*/
- .container{
+/* .container{
     width: 100%;
     background-size: cover;
     padding: 0;
-}
+}*/
 
-div.jumbotron {
+.jumbotron {
   background-color: #413839;
+  padding-bottom: 0;
 }
 
 .titleimage {
+    background-image: url('../app_etite.png');
     border: .3em solid white;
-    width: 70%;
+    width: 75%;
+    background-color: #413839;
+    margin-left: 13%;
 }
 
 a {
@@ -37,6 +41,10 @@ a {
 a:hover {
     color: #4C4646;
     background-color: #FFF8C6;
+}
+
+#topNav {
+    margin-left: 27%;
 }
 
 /*Body settings*/

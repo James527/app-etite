@@ -12,9 +12,14 @@ class UsersController < ApplicationController
 
 	def edit
 		@user = User.find_by(params[:id])
-
 	end
 
+	def vote
+	@vote = Vote.find(params[:vote_id])
+	@topic.votes.create
+	redirect_to(votes_id)
+
+	end
 
 	def update
 	    respond_to do |format|

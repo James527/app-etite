@@ -36,7 +36,6 @@ def update
       if @lunch.update(lunch_params)
         format.html { redirect_to @lunch, notice: 'Lunch was successfully updated.'}
         format.json { render :show, status: :ok, location: @lunch }
-        redirect_to @lunch
       else
         format.html {render :edit}
         format.json {render json: @lunch.errors, status: :unprocessable_entity }

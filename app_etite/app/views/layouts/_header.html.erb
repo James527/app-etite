@@ -1,17 +1,18 @@
-<div><%= image_tag("apetite.svg", :alt => "Title") %></div>
-<header class="navbar navbar-fixed-top navbar-inverse">
-
+<div class="jumbotron">
 <div class="container">
 
+<%= image_tag("app_etite.png", :alt => "Title", :class=> "titleimage") %>
+<br><br>
+
         <nav>
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-center">
             <li><%= link_to "Home Page",   root_path %></li>
             <li><%= link_to "Create Lunch", new_lunch_path %></li>
             <li><%= link_to "Profile", "#" %></li>
-            <li><%= link_to "Log in",  "#" %></li>
-            <li><%= link_to "Register", "#" %></li>
-            <li><%= link_to "Log Out",   'destroy_user_session_path' %></li>
+            <li><%= link_to "Log in",  new_user_session_path %></li>
+            <li><%= link_to "Register", new_user_registration_path %></li>
+            <li><%= link_to "Log Out", destroy_user_session_path %></li>
           </ul> 
         </nav>
       </div>
-    </header>
+    </div>

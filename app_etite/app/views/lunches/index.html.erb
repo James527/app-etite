@@ -18,10 +18,12 @@
       <tr>
         
         <td><%= lunch.rank %></td>
-        <td><%= lunch.lunch_type %></td>
-        <td><%= @user_id %></td>
-        <td><%= link_to 'Show', lunch %></td>
-        <td><%= link_to 'Edit', edit_lunch_path(lunch) %></td>
+        <td><%= lunch.food_type %></td>
+        <td><%=  %></td>
+        <td><%= link_to image_tag("rsz_upvotee.png", :alt => "Upvote"), method: :update, :notice => "You want to up vote this?" %></td>
+        <td><%= link_to image_tag("rsz_downvote.png", :alt => "Downvote"), method: :update, data: { confirm: 'You want to up vote this?' } %></td><br>
+        <td><%= link_to 'Show |', lunch %></td>
+        <td><%= link_to 'Edit |', edit_lunch_path(lunch) %></td>
         <td><%= link_to 'Destroy', lunch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         
       </tr>

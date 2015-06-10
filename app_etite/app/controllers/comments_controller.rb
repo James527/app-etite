@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+	
 	def create
 		@lunch = Lunch.find(params[:lunch_id])
 		@comment = 

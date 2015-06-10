@@ -88,7 +88,7 @@ body {
 }
 
 tbody tr{
-    border:solid #FFF8C6 1px;
+    border: solid #FFF8C6 1px;
 }
 tbody tr:nth-child(odd) {
    background-color: #f89b00;
@@ -98,9 +98,25 @@ tbody tr:nth-child(even) {
    background-color: #ffb741;
 }
 
-input {
+#ranker input {
+    border: none;
     border-radius: .5em;
-    background-color: #FFF8C6;
-    height: 1.5em;
+    background-color: transparent;
+    height: 2em;
     width: 1.5em;
+    display: inline-block;
+}
+
+#rank input #upButton {
+    color: red;
+}
+
+input {
+    background-color: #FFF8C6;
+}
+
+.actions input {
+    background-color: #FFF8C6;
+    border-radius: 1em;
+    border: none;
 }

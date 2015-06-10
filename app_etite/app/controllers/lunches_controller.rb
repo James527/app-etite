@@ -7,7 +7,6 @@ before_action :authenticate_user!
   end
  
   def show
-    @lunch = Lunch.find(params[:id])
   end
  
   def new
@@ -15,7 +14,6 @@ before_action :authenticate_user!
   end
 
   def edit
-    @lunch = Lunch.find(params[:id])
   end
 
 	def create
@@ -31,7 +29,6 @@ before_action :authenticate_user!
 end
 
 def update
-  @lunch = Lunch.find(params[:id])
     respond_to do |format|
       if @lunch.update(lunch_params)
         format.html { redirect_to @lunch, notice: 'Lunch was successfully updated.'}

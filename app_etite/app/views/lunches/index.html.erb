@@ -25,7 +25,9 @@
         <td><%= link_to 'Show |', lunch %></td>
         <td><%= link_to 'Edit |', edit_lunch_path(lunch) %></td>
         <td><%= link_to 'Destroy', {:controller=>:lunches,:action=>:destroy, :id=>lunch}, :method=>:delete %></td>
+      
       </tr>
+
     <% end %>
   </tbody>
 </table>

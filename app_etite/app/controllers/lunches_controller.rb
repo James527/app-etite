@@ -2,6 +2,7 @@ class LunchesController < ApplicationController
 before_action :set_lunch, only: [:show, :upvote, :downvote, :edit, :update, :destroy]
 before_action :authenticate_user!
 
+
   def index
     @lunches = Lunch.all
   end

@@ -8,6 +8,18 @@ before_action :authenticate_user!
  
   def show
   end
+
+  def upvote
+    @lunch.rank += 1
+    @lunch.save
+    redirect_to(lunches_path)
+  end
+
+  def downvote
+    @lunch.rank -= 1
+    @lunch.save
+    redirect_to(lunches_path)
+  end
  
   def new
   	@lunch = Lunch.new

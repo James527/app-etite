@@ -13,7 +13,10 @@ Rails.application.routes.draw do
 
   get 'profile' => 'users#show'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e313a845d63caf778f69929ff159a3bc3b361709
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

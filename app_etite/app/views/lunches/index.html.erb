@@ -16,6 +16,7 @@
     <% @lunches.each do |lunch| %>
       <tr>
         <td><%= lunch.food_type %></td>        
+<<<<<<< HEAD
         <td><%= lunch.rank %></td><span> upvote</span> <span>downvote</span>
         
 
@@ -28,6 +29,14 @@
         <td><%= button_to '-1', {:controller => :lunches, :action => :downvote, :id => lunch}%></td><br>
         <td> Will be email, evantually</td>
         
+=======
+        <td>
+          <%= lunch.rank %>
+          <%= button_to "+1", {:controller => :lunches, :action => :upvote, :id => lunch} %>
+          <%= button_to "-1", {:controller => :lunches, :action => :downvote, :id => lunch} %>
+        </td>
+        <td>Will be email, eventually</td>
+>>>>>>> e313a845d63caf778f69929ff159a3bc3b361709
         <td><%= link_to 'Show |', lunch %></td>
         <td><%= link_to 'Edit |', edit_lunch_path(lunch) %></td>
         <td><%= link_to 'Destroy', lunch, method: :delete, data: { confirm: 'Are you sure?' } %></td>

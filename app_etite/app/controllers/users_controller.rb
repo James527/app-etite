@@ -11,7 +11,10 @@ class UsersController < ApplicationController
 	def edit
 	end
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e313a845d63caf778f69929ff159a3bc3b361709
 	def update
 	    respond_to do |format|
 	      if @user.update(user_params)

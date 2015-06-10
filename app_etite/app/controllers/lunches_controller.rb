@@ -7,7 +7,6 @@ before_action :authenticate_user!
   end
  
   def show
-    @lunch = Lunch.find(params[:id])
   end
  
   def new
@@ -15,7 +14,6 @@ before_action :authenticate_user!
   end
 
   def edit
-    @lunch = Lunch.find(params[:id])
   end
 
   def upvote
@@ -44,7 +42,6 @@ before_action :authenticate_user!
 end
 
 def update
-  @lunch = Lunch.find(params[:id])
     respond_to do |format|
       if @lunch.update(lunch_params)
         format.html { redirect_to @lunch, notice: 'Lunch was successfully updated.'}
@@ -58,8 +55,13 @@ def update
 end
 
 def destroy
- @lunch.destroy
-    respond_to do |format|
+  # Lunch.find(params[:id]).destroy_all
+  #   respond_to do |format|
+  #    format.html { redirect_to lunches_url, notice: 'Lunch was successfully destroyed.' }
+  #    format.json { head :no_content }
+  # end
+  @lunch.destroy_lunch(params[:id])
+   respond_to do |format|
      format.html { redirect_to lunches_url, notice: 'Lunch was successfully destroyed.' }
      format.json { head :no_content }
   end
@@ -71,6 +73,10 @@ def set_lunch
 end
 
 def lunch_params
+<<<<<<< HEAD
   params.require(:lunch).permit(:food_type, :rank).merge(:user_id => current_user.id)
+=======
+  params.require(:lunch).permit(:food_type)
+>>>>>>> 6c433364c74155da83263f13fe68f298967a2973
 end
 end

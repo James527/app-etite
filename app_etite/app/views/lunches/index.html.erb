@@ -5,9 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Name |  </th>
-      <th> Rank |  </th>
       <th> Lunch Type |  </th>
+      <th> Rank |  </th>
       <th> User</th>
       <th colspan="3"></th>
     </tr>
@@ -16,8 +15,9 @@
   <tbody>
     <% @lunches.each do |lunch| %>
       <tr>
-        
+        <td><%= lunch.food_type %></td>        
         <td><%= lunch.rank %></td>
+<<<<<<< HEAD
         <td><%= lunch.food_type %></td>
         <td><%=  %></td>
         <!-- under construction  -->
@@ -31,6 +31,12 @@
         <td><%= link_to 'Edit |', edit_lunch_path %></td>
         <td><%= link_to 'Destroy', lunch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         
+=======
+        
+        <td><%= link_to 'Show |', lunch %></td>
+        <td><%= link_to 'Edit |', edit_lunch_path(lunch) %></td>
+        <td><%= link_to 'Destroy', {:controller=>:lunches,:action=>:destroy, :id=>lunch}, :method=>:delete %></td>
+>>>>>>> 6c433364c74155da83263f13fe68f298967a2973
       </tr>
     <% end %>
   </tbody>

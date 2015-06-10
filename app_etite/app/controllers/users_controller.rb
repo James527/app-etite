@@ -11,15 +11,7 @@ class UsersController < ApplicationController
 	def edit
 	end
 
-<<<<<<< HEAD
-=======
-	def vote
-		@vote = Vote.find(params[:vote_id])
-		@topic.votes.create
-		redirect_to(votes_id)
-	end
 
->>>>>>> 6c433364c74155da83263f13fe68f298967a2973
 	def update
 	    respond_to do |format|
 	      if @user.update(user_params)

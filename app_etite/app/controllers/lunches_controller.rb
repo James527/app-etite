@@ -1,5 +1,5 @@
 class LunchesController < ApplicationController
-before_action :set_lunch, only: [:show, :edit, :update, :destroy]
+before_action :set_lunch, only: [:show, :upvote, :downvote, :edit, :update, :destroy]
 before_action :authenticate_user!
 
   def index
@@ -17,16 +17,15 @@ before_action :authenticate_user!
   end
 
   def upvote
-  @lunch = Lunch.find(params[:id])
-  @lunch.votes.create
-  redirect_to(lunches_path)
-
+    @lunch.rank += 1
+    @lunch.save
+    redirect_to(lunches_path)
   end
-  def downvote
-  @lunch = Lunch.find(params[:id])
-  @lunch.votes.create
-  redirect_to(lunches_path)
 
+  def downvote
+    @lunch.rank -= 1
+    @lunch.save
+    redirect_to(lunches_path)
   end
 
 	def create
@@ -73,10 +72,9 @@ def set_lunch
 end
 
 def lunch_params
-<<<<<<< HEAD
+
   params.require(:lunch).permit(:food_type, :rank).merge(:user_id => current_user.id)
-=======
-  params.require(:lunch).permit(:food_type)
->>>>>>> 6c433364c74155da83263f13fe68f298967a2973
+
+
 end
 end

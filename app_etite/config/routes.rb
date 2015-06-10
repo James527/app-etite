@@ -1,24 +1,19 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :lunches/ 
+  resources :lunches
   resources :users
   
   resources :lunches do
+    resources :comments
     member do
       post 'upvote'
       post 'downvote'
     end
   end
-<<<<<<< HEAD
 
-=======
-end
->>>>>>> 6c433364c74155da83263f13fe68f298967a2973
   get 'profile' => 'users#show'
 
-  resources :lunches do
-  resources :comments
-end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

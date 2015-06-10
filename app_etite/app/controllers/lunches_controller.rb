@@ -16,6 +16,19 @@ before_action :authenticate_user!
   def edit
   end
 
+  def upvote
+  @lunch = Lunch.find(params[:id])
+  @lunch.votes.create
+  redirect_to(lunches_path)
+
+  end
+  def downvote
+  @lunch = Lunch.find(params[:id])
+  @lunch.votes.create
+  redirect_to(lunches_path)
+
+  end
+
 	def create
     @lunch = Lunch.new(lunch_params)
 
@@ -60,6 +73,10 @@ def set_lunch
 end
 
 def lunch_params
+<<<<<<< HEAD
+  params.require(:lunch).permit(:food_type, :rank).merge(:user_id => current_user.id)
+=======
   params.require(:lunch).permit(:food_type)
+>>>>>>> 6c433364c74155da83263f13fe68f298967a2973
 end
 end

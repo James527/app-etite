@@ -3,11 +3,17 @@ Rails.application.routes.draw do
   resources :lunches/ 
   resources :users
   
-  resources :votes do
-  member do
-    post 'upvote'
+  resources :lunches do
+    member do
+      post 'upvote'
+      post 'downvote'
+    end
   end
+<<<<<<< HEAD
+
+=======
 end
+>>>>>>> 6c433364c74155da83263f13fe68f298967a2973
   get 'profile' => 'users#show'
 
   resources :lunches do

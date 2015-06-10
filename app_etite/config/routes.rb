@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     post 'upvote'
   end
 end
-
   get 'profile' => 'users#show'
 
   resources :lunches do

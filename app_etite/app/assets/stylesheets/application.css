@@ -107,10 +107,18 @@ tbody tr:nth-child(even) {
     display: inline-block;
 }
 
-#rank input #upButton {
-    color: red;
+.upVote {
+    color: #000099;
+    transform: rotate(270deg);
+    font-size: 1.5em;
 }
 
+.downVote {
+    color: #b20000;
+    transform: rotate(90deg);
+    font-size: 1.5em;
+
+}
 input {
     background-color: #FFF8C6;
 }

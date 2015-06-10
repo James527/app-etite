@@ -15,11 +15,12 @@
   <tbody>
     <% @lunches.each do |lunch| %>
       <tr>
-        <td><%= lunch.food_type %></td>        
+        <td><%= lunch.food_type %></td> 
+        <td><%= lunch.rank %></td>       
         <td id="ranker">
-          <%= lunch.rank %>
-         <%= button_to "➜", {:controller => :lunches, :action => :upvote, :id => lunch} %>
-          <%= button_to "➜", {:controller => :lunches, :action => :downvote, :id => lunch} %>
+         
+          <div class="upVote"><%= button_to "➜", {:controller => :lunches, :action => :upvote, :id => lunch} %></div>
+          <div class="downVote"><%= button_to "➜", {:controller => :lunches, :action => :downvote, :id => lunch} %></div>
         </td>
         <td>Will be email, eventually</td>
         <td><%= link_to 'Show |', lunch %></td>

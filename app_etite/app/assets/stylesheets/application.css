@@ -58,6 +58,11 @@ header {
 #sideArrow {
     float: inline-block;
     color: #FFF8C6;
+    font-size: 3em;
+}
+
+.dropdown-menu{
+    list-style-type: none;
 }
 /*Body Settings*/
 

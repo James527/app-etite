@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :lunches/ 
+  resources :lunches 
   resources :users
   
   resources :votes do
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     post 'upvote'
   end
 end
-  get 'profile' => 'users#show'
+  resources :profiles
 
   resources :lunches do
   resources :comments

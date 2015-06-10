@@ -51,6 +51,8 @@ before_filter :configure_account_update_params, only: [:update]
   # The path used after sign up.
   def after_sign_up_path_for(resource)
     super(resource)
+    request.env['omniauth.origin'] || stored_location_for(resource) || new_profile_path
+  end
   end
 
   # The path used after sign up for inactive accounts.

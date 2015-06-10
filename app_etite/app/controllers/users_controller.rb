@@ -5,7 +5,6 @@ class UsersController < ApplicationController
 		@users = User.all
 	end
 
-
 	def show
 		@user = User.find_by(params[:id])
 	end
@@ -47,7 +46,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:id, :username, :email, :password)
+      params.require(:user).permit(:id, :email, :password)
     end
 
 end

@@ -11,8 +11,9 @@ Photo album including user stories, ERDs, and wireframes:
 To use:
 	1. git clone SHH
 	2. bundle install
-	3. rake db:migrate
-	4. rails s
+	3. rake db:create
+	4. rake db:migrate
+	5. rails s
 
 Things you may want to cover:
 

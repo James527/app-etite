@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(version: 20150610170204) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "lunches", force: :cascade do |t|
-    t.string   "food_type",  null: false
-    t.integer  "rank",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "food_type",              null: false
+    t.integer  "rank",       default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.integer  "user_id"
   end
 

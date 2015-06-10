@@ -14,46 +14,43 @@
  *= require_self
  */
 
+
 /*Header Settings*/
-/* .container{
-    width: 100%;
-    background-size: cover;
-    padding: 0;
-}*/
-
-.headerBG {
-  background-color: #413839;
-  padding-bottom: 0;
-  padding-top: 1em;
-}
-
-.carousel-inner {
-    width: 60%;
+header {
     background-color: #413839;
-    margin-left: 20%;
 }
 
-a {
-    color: #FFF8C6;
-}
-
-a:hover {
-    color: #4C4646;
-    background-color: #FFF8C6;
+.carousel-inner > .item > img {
+    margin: 0 auto;
+    padding-top: 2em;
 }
 
 #topNav {
-    margin-left: 27%;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 23em;
+    background-color: #413839;
 }
 
-/*Body settings*/
-body {
+#topNav > li > a {
+    color: #FFF8C6;
+}
+
+#topNav > li > a:hover {
+    color: #413839;
+    background-color: #FFF8C6;
+}
+
+#topNav > li > a:active {
+    background-color: #FFF8C6;
+}
+/*Body Settings*/
+
+#bodyFiller {
     background-color: #FFB02C;
-    color: #4C4646;
-    padding: 0;
 }
 
-#bodyContent.container{
-    position: relative;
-    left: 3em;
+body {
+    padding-top: 0;
+    background-color: #FFB02C;
 }

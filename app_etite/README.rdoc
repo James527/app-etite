@@ -6,6 +6,14 @@ application up and running.
 
 Photo album including user stories, ERDs, and wireframes:
 	http://s288.photobucket.com/user/cregensburger/library/app-etite%20work
+
+
+To use:
+	1. git clone SHH
+	2. bundle install
+	3. rake db:migrate
+	4. rails s
+
 Things you may want to cover:
 
 * Ruby version

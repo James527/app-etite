@@ -8,109 +8,123 @@
 
 # profile seeding 
 
-profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test"
-    })
-profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test"
-    })
-profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test"
-    })
-profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test"
-    })
-profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test"
-    })
-profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test"
-    })
-profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test"
-    })
-profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test"
-    })
-profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test"
-    })
-profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test"
-    })
+
 
 #newusers
 
 james = User.new({
     :email => "jamesrutledge@email.com",
     :password => "password",
-    :profile_id => 1
+    
     })
 james.save
 al = User.new({
     :email => "al@email.com",
     :password => "password",
-    :profile_id => 2
+    
     })
 al.save
 courtney = User.new({
     :email => "cregensburger@email.com",
     :password => "password",
-    :profile_id => 3
+    
     })
 courtney.save
 walker = User.new({
     :email => "walker@email.com",
     :password => "password",
-    :profile_id => 4
+    
     })
 walker.save
 caren = User.new({
     :email => "carenvaleria@email.com",
     :password => "password",
-    :profile_id => 5
+    
     })
 caren.save
 nancy = User.new({
     :email => "nancy@email.com",
     :password => "password",
-    :profile_id => 6
+    
     })
 nancy.save
 wendi = User.new({
     :email => "wendi@email.com",
     :password => "password",
-    :profile_id => 7
+    
     })
 wendi.save
 wes = User.new({
     :email => "wes@email.com",
     :password => "password",
-    :profile_id => 8
+    
     })
 wes.save
 zach = User.new({
     :email => "zachfountain@email.com",
     :password => "password",
-    :profile_id => 9
+    
     })
 zach.save
 alejandra = User.new({
     :email => "alejandrachapa@email.com",
     :password => "password",
-    :profile_id => 10
+    
     })
 alejandra.save
+
+# profile seeding 
+profile = Profile.create({
+    :first_name => "test",
+    :last_name => "test",
+    :user_id => 1
+    })
+profile = Profile.create({
+    :first_name => "test",
+    :last_name => "test",
+    :user_id => 2
+    })
+profile = Profile.create({
+    :first_name => "test",
+    :last_name => "test",
+    :user_id => 3
+    })
+profile = Profile.create({
+    :first_name => "test",
+    :last_name => "test",
+    :user_id => 4
+    })
+profile = Profile.create({
+    :first_name => "test",
+    :last_name => "test",
+    :user_id => 5
+    })
+profile = Profile.create({
+    :first_name => "test",
+    :last_name => "test",
+    :user_id => 6
+    })
+profile = Profile.create({
+    :first_name => "test",
+    :last_name => "test",
+    :user_id => 7
+    })
+profile = Profile.create({
+    :first_name => "test",
+    :last_name => "test",
+    :user_id => 8
+    })
+profile = Profile.create({
+    :first_name => "test",
+    :last_name => "test",
+    :user_id => 9
+    })
+profile = Profile.create({
+    :first_name => "test",
+    :last_name => "test",
+    :user_id => 10
+    })
+
 
 #Lunch seeds
 lunch = Lunch.create({

@@ -39,9 +39,16 @@
 >>>>>>> e313a845d63caf778f69929ff159a3bc3b361709
         <td><%= link_to 'Show |', lunch %></td>
         <td><%= link_to 'Edit |', edit_lunch_path(lunch) %></td>
+<<<<<<< HEAD
         <td><%= link_to 'Destroy', lunch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
          <!-- <%= link_to 'Destroy', {:controller=>:lunches,:action=>:destroy, :id=>lunch}, :method=>:delete %>-->
       </tr> 
+=======
+        <td><%= link_to 'Destroy', {:controller=>:lunches,:action=>:destroy, :id=>lunch}, :method=>:delete %></td>
+      
+      </tr>
+
+>>>>>>> c7c2367b86580e6f32111110c85da704f14e5f24
     <% end %>
   </tbody>
 </table>

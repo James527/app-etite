@@ -2,6 +2,7 @@ class LunchesController < ApplicationController
 before_action :set_lunch, only: [:show, :upvote, :downvote, :edit, :update, :destroy]
 before_action :authenticate_user!
 
+
   def index
     @lunches = Lunch.all
   end
@@ -42,6 +43,7 @@ before_action :authenticate_user!
 
 	def create
     @lunch = Lunch.new(lunch_params)
+    @lunch.save
 
   	respond_to do |format|
       if @lunch.save
@@ -84,9 +86,13 @@ def set_lunch
 end
 
 def lunch_params
+<<<<<<< HEAD
 
   params.require(:lunch).permit(:food_type, :rank).merge(:user_id => current_user.id)
 
 
+=======
+  params.require(:lunch).permit(:food_type, :rank, :user_id)
+>>>>>>> c7c2367b86580e6f32111110c85da704f14e5f24
 end
 end

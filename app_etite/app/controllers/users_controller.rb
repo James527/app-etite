@@ -14,10 +14,9 @@ class UsersController < ApplicationController
 	end
 
 	def vote
-	@vote = Vote.find(params[:vote_id])
-	@topic.votes.create
-	redirect_to(votes_id)
-
+		@vote = Vote.find(params[:vote_id])
+		@topic.votes.create
+		redirect_to(votes_id)
 	end
 
 	def update

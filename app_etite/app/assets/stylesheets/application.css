@@ -44,6 +44,21 @@ header {
 #topNav > li > a:active {
     background-color: #FFF8C6;
 }
+
+
+#picHeader{
+    font-family: 'Ribeye Marrow', cursive;
+    color: #FFF8C6;
+    font-size: 5em;
+    position: relative;
+    bottom: 2.5em;
+    left: 4em;
+}
+
+#sideArrow {
+    float: inline-block;
+    color: #FFF8C6;
+}
 /*Body Settings*/
 
 #bodyFiller {
@@ -52,9 +67,4 @@ header {
 
 body {
     padding-top: 0;
-    background-color: #FFB02C;
-}
-
-#sideArrow {
-    color: red;
 }

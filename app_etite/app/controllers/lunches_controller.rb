@@ -1,5 +1,5 @@
 class LunchesController < ApplicationController
-before_action :set_lunch, only: [:show, :edit, :update, :destroy]
+before_action :set_lunch, only: [:show, :upvote, :downvote, :edit, :update, :destroy]
 before_action :authenticate_user!
 
   def index
@@ -7,6 +7,18 @@ before_action :authenticate_user!
   end
  
   def show
+  end
+
+  def upvote
+    @lunch.rank += 1
+    @lunch.save
+    redirect_to(lunches_path)
+  end
+
+  def downvote
+    @lunch.rank -= 1
+    @lunch.save
+    redirect_to(lunches_path)
   end
  
   def new

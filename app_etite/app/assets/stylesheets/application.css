@@ -49,6 +49,7 @@ header {
 #picHeader{
     font-family: 'Ribeye Marrow', cursive;
     color: #FFF8C6;
+    box-shadow: black;
     font-size: 5em;
     position: relative;
     bottom: 2.5em;
@@ -63,6 +64,7 @@ header {
 
 .dropdown-menu{
     list-style-type: none;
+    text-decoration: none
 }
 /*Body Settings*/
 

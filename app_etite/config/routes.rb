@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   resources :lunches do
     resources :comments
     member do
-      post 'upvote'
-      post 'downvote'
+      put 'like', to: "lunches#upvote"
+      put 'dislike', to: 'lunches#downvote'
     end
   end
 

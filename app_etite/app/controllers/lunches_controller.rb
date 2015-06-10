@@ -11,15 +11,17 @@ before_action :authenticate_user!
   end
 
   def upvote
-    @lunch.rank += 1
+    @lunch.upvote_by current_user
     @lunch.save
     redirect_to(lunches_path)
+    # redirect_to :back
   end
 
   def downvote
-    @lunch.rank -= 1
+    @lunch.downvote_by current_user
     @lunch.save
     redirect_to(lunches_path)
+    # redirect_to :back
   end
  
   def new

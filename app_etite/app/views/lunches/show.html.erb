@@ -3,12 +3,12 @@
 	<p id="notice"><%= notice %></p>
 
 	<strong>Name:</strong>
-	<%= %>
+	<p><%= current_user.inspect %></p>
 </p>
 
 <p>
 	<strong>Rank:</strong>
-	<%= @lunch.rank %>
+	<%= @lunch.current_user.rank %>
 </p>
 
 <p>

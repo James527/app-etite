@@ -42,8 +42,13 @@ def update
 end
 
 def destroy
- @lunch.destroy
-    respond_to do |format|
+  # Lunch.find(params[:id]).destroy_all
+  #   respond_to do |format|
+  #    format.html { redirect_to lunches_url, notice: 'Lunch was successfully destroyed.' }
+  #    format.json { head :no_content }
+  # end
+  @lunch.destroy_lunch(params[:id])
+   respond_to do |format|
      format.html { redirect_to lunches_url, notice: 'Lunch was successfully destroyed.' }
      format.json { head :no_content }
   end

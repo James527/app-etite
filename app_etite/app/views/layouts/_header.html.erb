@@ -54,7 +54,9 @@
           <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="container">
+    
+      <nav>
+      <div class="container">
         <div class="col-md-3" id="followMenu">
           <a class="dropdown-toggle" data-toggle="dropdown"><p id="sideArrow">&#187;</p></a>
           <ul class="dropdown-menu">
@@ -63,10 +65,10 @@
             <li><a target="_blank" title="follow us on instagram" href="http://www.instagram.com/"><img alt="follow us on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0></a></li>
           </ul>
       </div>
-      <nav>
         <ul class="nav navbar-nav navbar-center" id="topNav">
           <li class= "animate hinge"><%= link_to "Home Page", root_path %></li>
           <li class= "animate hinge"><%= link_to "Create Lunch", new_lunch_path %></li>
+          <li class= "animate hinge"><%= link_to "Profile", profiles_path %></li>
           
           <li class= "animate hinge"><%= link_to "Log in",  new_user_session_path %></li>
           <li class= "animate hinge"><%= link_to "Register", new_user_registration_path %></li>

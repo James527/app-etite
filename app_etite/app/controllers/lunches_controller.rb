@@ -4,7 +4,7 @@ before_action :authenticate_user!
 
 
   def index
-    @lunches = Lunch.all
+    @lunches = Lunch.order("rank DESC").all
   end
  
   def show

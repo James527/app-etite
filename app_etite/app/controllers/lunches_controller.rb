@@ -60,6 +60,6 @@ def set_lunch
 end
 
 def lunch_params
-  params.require(:lunch).permit(:food_type, :rank)
+  params.require(:lunch).permit(:food_type)
 end
 end

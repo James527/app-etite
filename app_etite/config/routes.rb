@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :lunches
+  resources :lunches/ 
   resources :users
   
   resources :votes do

@@ -30,8 +30,8 @@ before_action :authenticate_user!
   end
 
 	def create
-    @lunch = Lunch.new(lunch_params)
-    @lunch.save
+    @current_id = current_user.id
+    @lunch = Lunch.create(lunch_params)
 
   	respond_to do |format|
       if @lunch.save
@@ -74,6 +74,6 @@ def set_lunch
 end
 
 def lunch_params
-  params.require(:lunch).permit(:food_type, :rank, :user_id)
+  params.require(:lunch).permit(:food_type).merge(:rank => 0, :user_id => current_user.id)
 end
 end

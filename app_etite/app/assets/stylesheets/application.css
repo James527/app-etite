@@ -48,8 +48,7 @@ header {
 
 #picHeader{
     font-family: 'Ribeye Marrow', cursive;
-    color: #FFF8C6;
-    box-shadow: black;
+    color: #f89b00;
     font-size: 5em;
     position: relative;
     bottom: 2.5em;
@@ -60,11 +59,23 @@ header {
     float: inline-block;
     color: #FFF8C6;
     font-size: 3em;
+    list-style-type: none;
+    text-decoration: none;
 }
 
-.dropdown-menu{
+a .dropdown-toggle:hover {
+    text-decoration: none;
+}
+
+#followMenu {
     list-style-type: none;
-    text-decoration: none
+    text-decoration: none;
+    float: inline-block;
+}
+
+ul li {
+    display: inline-block;
+    border: 0;
 }
 /*Body Settings*/
 
@@ -74,4 +85,22 @@ header {
 
 body {
     padding-top: 0;
+}
+
+tbody tr{
+    border:solid #FFF8C6 1px;
+}
+tbody tr:nth-child(odd) {
+   background-color: #f89b00;
+}
+
+tbody tr:nth-child(even) {
+   background-color: #ffb741;
+}
+
+input {
+    border-radius: .5em;
+    background-color: #FFF8C6;
+    height: 1.5em;
+    width: 1.5em;
 }

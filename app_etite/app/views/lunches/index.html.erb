@@ -18,8 +18,8 @@
         <td><%= lunch.food_type %></td>        
         <td>
           <%= lunch.rank %>
-          <%= button_to "+1", {:controller => :lunches, :action => :upvote, :id => lunch} %>
-          <%= button_to "-1", {:controller => :lunches, :action => :downvote, :id => lunch} %>
+          <%= button_to "+", {:controller => :lunches, :action => :upvote, :id => lunch} %>
+          <%= button_to "-", {:controller => :lunches, :action => :downvote, :id => lunch} %>
         </td>
         <td>Will be email, eventually</td>
         <td><%= link_to 'Show |', lunch %></td>

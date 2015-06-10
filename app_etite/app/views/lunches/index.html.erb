@@ -16,8 +16,12 @@
     <% @lunches.each do |lunch| %>
       <tr>
         <td><%= lunch.food_type %></td>        
-        <td><%= lunch.rank %></td>
-        
+        <td>
+          <%= lunch.rank %>
+          <%= button_to "+1", {:controller => :lunches, :action => :upvote, :id => lunch} %>
+          <%= button_to "-1", {:controller => :lunches, :action => :downvote, :id => lunch} %>
+        </td>
+        <td>Will be email, eventually</td>
         <td><%= link_to 'Show |', lunch %></td>
         <td><%= link_to 'Edit |', edit_lunch_path(lunch) %></td>
         <td><%= link_to 'Destroy', {:controller=>:lunches,:action=>:destroy, :id=>lunch}, :method=>:delete %></td>

@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   resources :lunches
   resources :users
   
-  resources :votes do
-  member do
-    post 'upvote'
+  resources :lunches do
+    member do
+      post 'upvote'
+      post 'downvote'
+    end
   end
-end
 
   get 'profile' => 'users#show'
 

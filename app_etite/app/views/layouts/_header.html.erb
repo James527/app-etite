@@ -1,10 +1,12 @@
 <head>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://daneden.github.io/animate.css">
 </head>
 
-<div class="headerBG">
+<header>
+  <div class="headerBG">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -30,27 +32,27 @@
 
 
       <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="arrowLeft">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
 
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="arrowRight">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
   </div>
-    <br><br>
     <div class="container">
       <nav>
         <ul class="nav navbar-nav navbar-center" id="topNav">
-          <li><%= link_to "Home Page",   root_path %></li>
-          <li><%= link_to "Create Lunch", new_lunch_path %></li>
-          <li><%= link_to "Profile", profile_path %></li>
-          <li><%= link_to "Log in",  new_user_session_path %></li>
-          <li><%= link_to "Register", new_user_registration_path %></li>
-          <li><%= link_to "Log Out", destroy_user_session_path %></li>
+          <li class= "animate hinge"><%= link_to "Home Page", root_path %></li>
+          <li class= "animate hinge"><%= link_to "Create Lunch", new_lunch_path %></li>
+          <li class= "animate hinge"><%= link_to "Profile", profile_path %></li>
+          <li class= "animate hinge"><%= link_to "Log in",  new_user_session_path %></li>
+          <li class= "animate hinge"><%= link_to "Register", new_user_registration_path %></li>
+          <li class= "animate hinge"><%= link_to "Log Out", destroy_user_session_path %></li>
         </ul> 
       </nav>
     </div>
-</div>
+  </div>
+</header>

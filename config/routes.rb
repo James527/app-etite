@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-
   resources :lunches 
-
   resources :users
+  resources :profiles
+  resources :about
   
   resources :lunches do
     resources :comments
@@ -12,9 +12,6 @@ Rails.application.routes.draw do
       post 'downvote'
     end
   end
-
-  
-  resources :profiles
 
 
   # The priority is based upon order of creation: first created -> highest priority.

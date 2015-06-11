@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<% if current_user.profile = nil %>
+<% redirect_to new_profile_path %>
+<% else %>
 <h1>Lunches</h1>
 <hr>
 
@@ -39,3 +41,5 @@
 <br>
 
 <%= link_to 'New lunch', new_lunch_path %>
+
+<% end %>

@@ -75,53 +75,53 @@ alejandra.save
 
 # profile seeding 
 profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test",
+    :first_name => "James",
+    :last_name => "Rutledge",
     :user_id => 1
     })
 profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test",
+    :first_name => "Al",
+    :last_name => "Mortada",
     :user_id => 2
     })
 profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test",
+    :first_name => "Courtney",
+    :last_name => "Regensburger",
     :user_id => 3
     })
 profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test",
+    :first_name => "Walker",
+    :last_name => "Flieller",
     :user_id => 4
     })
 profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test",
+    :first_name => "Caren",
+    :last_name => "Garcia",
     :user_id => 5
     })
 profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test",
+    :first_name => "Nancy",
+    :last_name => "Pancy",
     :user_id => 6
     })
 profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test",
+    :first_name => "Wendi",
+    :last_name => "lastname",
     :user_id => 7
     })
 profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test",
+    :first_name => "Wes",
+    :last_name => "IsSuchADad",
     :user_id => 8
     })
 profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test",
+    :first_name => "Zach",
+    :last_name => "Fountain",
     :user_id => 9
     })
 profile = Profile.create({
-    :first_name => "test",
-    :last_name => "test",
+    :first_name => "Alejandra",
+    :last_name => "Chapa",
     :user_id => 10
     })
 

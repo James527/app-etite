@@ -27,14 +27,13 @@
           <div class="upVote"><%= button_to "➜", {:controller => :lunches, :action => :upvote, :id => lunch, disable_with: "Processing..."} %></div>
           <div class="downVote"><%= button_to "➜", {:controller => :lunches, :action => :downvote, :id => lunch} %></div>
         </td>
-<<<<<<< HEAD
-        <td class="insideLunch"><%= lunch.user %></td>
-=======
+
         <td class="insideLunch"><%= lunch.user.email %></td>
->>>>>>> d3e8fb6fdb1635f899fbf35fe2de0c1f51496c51
         <td class="insideLunch"><%= link_to 'Show', lunch %></td>
         <td class="insideLunch"><%= link_to 'Edit', edit_lunch_path(lunch) %></td>
+        <% if current_user.admin %>
         <td class="insideLunch"><%= link_to 'Destroy', {:controller=>:lunches,:action=>:destroy, :id=>lunch}, :method=>:delete %></td>
+        <% end %>
       
       </tr>
 

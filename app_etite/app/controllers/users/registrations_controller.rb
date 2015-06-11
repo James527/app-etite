@@ -10,6 +10,7 @@ before_filter :configure_account_update_params, only: [:update]
   # POST /resource
   def create
     super
+    format.html { redirect_to profile_new_path, notice: 'Lunch saved, Mmmmmmm.'}
   end
 
   # GET /resource/edit

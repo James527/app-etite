@@ -17,14 +17,17 @@ Photo album including user stories, ERDs, and wireframes:
 
 
 To use:
-	1. git clone SHH
-	2. bundle install
-	3. rake db:create
-	4. rake db:migrate
-	5. rails s
+	<ul>
+		<li>1. git clone SHH</li>
+		<li>2. bundle install</li>
+		<li>3. rake db:create</li>
+		<li>4. rake db:migrate</li>
+		<li>5. rails s</li>
+	</ul>
 
 
 Find us on Twitter and Facebook!
-	https://twitter.com/App_etite_team
-
-	https://www.facebook.com/groups/1586678871606739/
+	<ul>
+		<li>https://twitter.com/App_etite_team</li>
+		<li>https://www.facebook.com/groups/1586678871606739/</li>
+	</ul>	

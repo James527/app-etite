@@ -129,3 +129,12 @@ input {
     border: none;
     margin: .5em;
 }
+
+.lunchHeader {
+    text-align: center;
+}
+
+.insideLunch {
+    padding-left: .5em;
+    padding-right: .5em;
+}

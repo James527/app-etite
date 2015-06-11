@@ -80,6 +80,10 @@ test:
 #
 production:
   <<: *default
-  database: app_etite_production
-  username: app_etite
+  database: <%= ENV['APP_ETITE_DATABASE_DBNAME'] %>
+  port: <%= ENV['APP_ETITE_DATABASE_USER'] %>
+  host: <%= ENV['APP_ETITE_DATABASE_HOST'] %>
   password: <%= ENV['APP_ETITE_DATABASE_PASSWORD'] %>
+  username: <%= ENV['APP_ETITE_DATABASE_USER'] %>
+
+

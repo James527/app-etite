@@ -18,28 +18,31 @@ ActiveRecord::Schema.define(version: 20150610221606) do
 
   create_table "comments", force: :cascade do |t|
     t.string  "text",     null: false
-    t.integer "user_id",  null: false
-    t.integer "lunch_id", null: false
+    t.integer "user_id"
+    t.integer "lunch_id"
   end
 
   add_index "comments", ["lunch_id"], name: "index_comments_on_lunch_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "lunches", force: :cascade do |t|
-    t.string   "food_type",  null: false
-    t.integer  "rank",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id",    null: false
+    t.string   "food_type",              null: false
+    t.integer  "rank",       default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "user_id"
   end
 
   add_index "lunches", ["food_type"], name: "index_lunches_on_food_type", using: :btree
   add_index "lunches", ["user_id"], name: "index_lunches_on_user_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
-    t.string "first_name", null: false
-    t.string "last_name",  null: false
+    t.string  "first_name", null: false
+    t.string  "last_name",  null: false
+    t.integer "user_id"
   end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username",                               null: false
@@ -56,11 +59,9 @@ ActiveRecord::Schema.define(version: 20150610221606) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "admin",                  default: false
-    t.integer  "profile_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["profile_id"], name: "index_users_on_profile_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
@@ -82,5 +83,5 @@ ActiveRecord::Schema.define(version: 20150610221606) do
   add_foreign_key "comments", "lunches"
   add_foreign_key "comments", "users"
   add_foreign_key "lunches", "users"
-  add_foreign_key "users", "profiles"
+  add_foreign_key "profiles", "users"
 end

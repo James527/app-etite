@@ -4,7 +4,7 @@ before_action :authenticate_user!
 
 
   def index
-    @lunches = Lunch.all
+    @lunches = Lunch.order("rank DESC").all
   end
  
   def show
@@ -33,8 +33,8 @@ before_action :authenticate_user!
   end
 
 	def create
-    @lunch = Lunch.new(lunch_params)
-    @lunch.save
+    @current_id = current_user.id
+    @lunch = Lunch.create(lunch_params)
 
   	respond_to do |format|
       if @lunch.save
@@ -77,6 +77,10 @@ def set_lunch
 end
 
 def lunch_params
+<<<<<<< HEAD
   params.require(:lunch).permit(:food_type, :rank).merge(:user_id => current_user.id)
+=======
+  params.require(:lunch).permit(:food_type).merge(:rank => 0, :user_id => current_user.id)
+>>>>>>> 467db2612220a6fbb5792ee3dd657f1ea563f225
 end
 end

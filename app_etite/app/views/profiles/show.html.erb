@@ -1,1 +1,11 @@
-<%=	@profile.first_name %>
+<p id="notice"><%= notice %></p>
+
+<h1> Hello <%= @profile.first_name %> </h1>
+
+<strong>First Name: <%=	@profile.first_name %></strong><br>
+<strong>Last Name: <%= @profile.last_name %></strong><br>
+<strong>Email: <%= @profile.user.email %></strong><br>
+<strong>User Id: <%= @profile.user.id %></strong><br>
+<strong>Lunches: <%= @profile.user.lunches %></strong><br>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> 

@@ -1,4 +1,5 @@
 <p id="notice"></p> 
+<<<<<<< HEAD
 
 	<p id="notice"><%= notice %></p>
 
@@ -6,16 +7,25 @@
 	<p><%= current_user.inspect %></p>
 </p>
 
+=======
+<p id="notice"><%= notice %></p>
+>>>>>>> 467db2612220a6fbb5792ee3dd657f1ea563f225
 <p>
-	<strong>Rank:</strong>
-	<%= @lunch.rank %>
+  <strong>Lunch type:</strong>
+  <%= @lunch.food_type %>
 </p>
-
 <p>
-	<strong>Lunch type:</strong>
-	<%= @lunch.food_type %>
+  <strong>Rank:</strong>
+  <%= @lunch.rank %>
 </p>
+<<<<<<< HEAD
 
+=======
+<p>
+  <strong>User:</strong>
+  <%= @lunch.user.email %>
+</p>
+>>>>>>> 467db2612220a6fbb5792ee3dd657f1ea563f225
 
 <h2>Comments</h2>
 <%= render @lunch.comments %>

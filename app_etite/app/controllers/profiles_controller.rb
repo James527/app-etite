@@ -44,7 +44,7 @@ end
 # POST /profiles
 # POST /profiles.json
 def create
-  @profile = Profile.new(profile_params)
+@profile = Profile.new(profile_params)
 
 respond_to do |format|
   if @profile.save
@@ -90,7 +90,7 @@ def set_profile
 end
 
  def profile_params
-  params.require(:profile).permit(:first_name, :last_name)
+  params.require(:profile).permit(:first_name, :last_name).merge(:user_id => current_user.id)
 end
 end
 

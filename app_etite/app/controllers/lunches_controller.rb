@@ -35,7 +35,7 @@ before_action :authenticate_user!
 	def create
     @current_id = current_user.id
     @lunch = Lunch.create(lunch_params)
-
+    
   	respond_to do |format|
       if @lunch.save
         format.html { redirect_to lunches_url, notice: 'Lunch saved, Mmmmmmm.'}

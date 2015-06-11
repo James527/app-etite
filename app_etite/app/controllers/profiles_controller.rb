@@ -1,4 +1,7 @@
 class ProfilesController < ApplicationController
+before_action :set_profile, only: [:show, :upvote, :downvote, :edit, :update, :destroy]
+before_action :authenticate_user!
+
  # GET /profiles
  # GET /profiles.json
 def index
@@ -74,7 +77,6 @@ end
 # DELETE /profiles/1
 # DELETE /profiles/1.json
 def destroy
-  @profile = Profile.find(params[:id])
   @profile.destroy
 
   respond_to do |format|
@@ -83,6 +85,10 @@ def destroy
   end
  end
  private 
+def set_profile
+  @profile = Profile.find(params[:id])
+end
+
  def profile_params
   params.require(:profile).permit(:first_name, :last_name)
 end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :lunches 
   resources :users
   resources :profiles
+  resources :about
   
   resources :lunches do
     resources :comments
@@ -11,8 +12,6 @@ Rails.application.routes.draw do
       post 'downvote'
     end
   end
-
-  get 'about#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

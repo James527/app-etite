@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-
   resources :lunches 
-
   resources :users
+  resources :profiles
   
   resources :lunches do
     resources :comments
@@ -13,8 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
-  
-  resources :profiles
+  get 'about#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

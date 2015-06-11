@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 	def destroy
 		@user.destroy
 	    respond_to do |format|
-	      format.html { redirect_to users_url, notice: 'User has been successfully deleted!' }
+	      format.html { redirect_to users_url, notice: 'Only current User can has deleted! ' }
 	    end
 	end
 

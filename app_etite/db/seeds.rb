@@ -14,64 +14,119 @@
 
 james = User.new({
     :email => "jamesrutledge@email.com",
-    :password => "password",
-    
+    :password => "password",    
     })
 james.save
 al = User.new({
     :email => "al@email.com",
-    :password => "password",
-    
+    :password => "password",    
     })
 al.save
 courtney = User.new({
     :email => "cregensburger@email.com",
-    :password => "password",
-    
+    :password => "password",    
     })
 courtney.save
 walker = User.new({
     :email => "walker@email.com",
-    :password => "password",
-    
+    :password => "password",    
     })
 walker.save
 caren = User.new({
     :email => "carenvaleria@email.com",
-    :password => "password",
-    
+    :password => "password",    
     })
 caren.save
 nancy = User.new({
     :email => "nancy@email.com",
-    :password => "password",
-    
+    :password => "password",    
     })
 nancy.save
 wendi = User.new({
     :email => "wendi@email.com",
-    :password => "password",
-    
+    :password => "password",    
     })
 wendi.save
 wes = User.new({
     :email => "wes@email.com",
-    :password => "password",
-    
+    :password => "password",    
     })
 wes.save
 zach = User.new({
     :email => "zachfountain@email.com",
-    :password => "password",
-    
+    :password => "password",    
     })
 zach.save
 alejandra = User.new({
     :email => "alejandrachapa@email.com",
-    :password => "password",
-    
+    :password => "password",    
     })
 alejandra.save
+max = User.new({
+    :email => "max@email.com",
+    :password => "password",    
+    })
+max.save
+nathan = User.new({
+    :email => "nathan@email.com",
+    :password => "password",    
+    })
+nathan.save
+mike = User.new({
+    :email => "mike@email.com",
+    :password => "password",    
+    })
+mike.save
+sean = User.new({
+    :email => "sean@email.com",
+    :password => "password",    
+    })
+sean.save
+clint = User.new({
+    :email => "clint@email.com",
+    :password => "password",    
+    })
+clint.save
+michael = User.new({
+    :email => "michael@email.com",
+    :password => "password",    
+    })
+michael.save
+elias = User.new({
+    :email => "elias@email.com",
+    :password => "password",    
+    })
+elias.save
+daniel = User.new({
+    :email => "daniel@email.com",
+    :password => "password",    
+    })
+daniel.save
+heidi = User.new({
+    :email => "heidi@email.com",
+    :password => "password",    
+    })
+heidi.save
+miguel = User.new({
+    :email => "miguel@email.com",
+    :password => "password",    
+    })
+miguel.save
+matt_t = User.new({
+    :email => "matt_t@email.com",
+    :password => "password",    
+    })
+matt_t.save
+matt_d = User.new({
+    :email => "matt_d@email.com",
+    :password => "password",    
+    })
+matt_d.save
+tony = User.new({
+    :email => "tony@email.com",
+    :password => "password",    
+    })
+tony.save
 
 # profile seeding 
 profile = Profile.create({
@@ -101,17 +156,17 @@ profile = Profile.create({
     })
 profile = Profile.create({
     :first_name => "Nancy",
-    :last_name => "Pancy",
+    :last_name => "Valladares",
     :user_id => 6
     })
 profile = Profile.create({
     :first_name => "Wendi",
-    :last_name => "lastname",
+    :last_name => "Donaldson-Speciale",
     :user_id => 7
     })
 profile = Profile.create({
     :first_name => "Wes",
-    :last_name => "IsSuchADad",
+    :last_name => "Hoover",
     :user_id => 8
     })
 profile = Profile.create({
@@ -123,6 +178,72 @@ profile = Profile.create({
     :first_name => "Alejandra",
     :last_name => "Chapa",
     :user_id => 10
+    })
+
+profile = Profile.create({
+    :first_name => "Max",
+    :last_name => "DePriest",
+    :user_id => 11
+    })
+profile = Profile.create({
+    :first_name => "Nathan",
+    :last_name => "Bloom",
+    :user_id => 12
+    })
+profile = Profile.create({
+    :first_name => "Mike",
+    :last_name => "Dang",
+    :user_id => 13
+    })
+profile = Profile.create({
+    :first_name => "Sean",
+    :last_name => "Shannon",
+    :user_id => 14
+    })
+profile = Profile.create({
+    :first_name => "Clint",
+    :last_name => "Espinoza",
+    :user_id => 15
+    })
+profile = Profile.create({
+    :first_name => "Michael",
+    :last_name => "Neal",
+    :user_id => 16
+    })
+profile = Profile.create({
+    :first_name => "Elias",
+    :last_name => "Carlston",
+    :user_id => 17
+    })
+profile = Profile.create({
+    :first_name => "Daniel",
+    :last_name => "Rendon",
+    :user_id => 18
+    })
+profile = Profile.create({
+    :first_name => "Heidi",
+    :last_name => "Poon",
+    :user_id => 19
+    })
+profile = Profile.create({
+    :first_name => "Miguel",
+    :last_name => "Solano",
+    :user_id => 20
+    })
+profile = Profile.create({
+    :first_name => "Matt",
+    :last_name => "Thomas",
+    :user_id => 21
+    })
+profile = Profile.create({
+    :first_name => "Matt",
+    :last_name => "Duncan",
+    :user_id => 22
+    })
+profile = Profile.create({
+    :first_name => "Tony",
+    :last_name => "Dominguez",
+    :user_id => 23
     })
 
 

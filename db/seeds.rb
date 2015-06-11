@@ -14,7 +14,8 @@
 
 james = User.new({
     :email => "jamesrutledge@email.com",
-    :password => "password",    
+    :password => "password",
+    :admin => true    
     })
 james.save
 al = User.new({

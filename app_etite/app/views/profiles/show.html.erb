@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1> Hello <%= @profile.first_name %> </h1>
+<hr>
 
 <strong>First Name: <%=	@profile.first_name %></strong><br>
 <br><strong>Last Name: <%= @profile.last_name %></strong><br>
@@ -12,8 +13,9 @@
 <strong><%= lunches.food_type %></strong><br>
 <% end %>
 
-<br><strong>Comments:</strong><br>
+<br><strong>Previous Comments:</strong><br>
 <% @profile.user.comments.each do |comments| %>
+
 <strong><%= comments.text %></strong><br>
 <% end %>
 

@@ -130,6 +130,14 @@ input {
     margin: .5em;
 }
 
+#fSubmit {
+    background-color: #FFF8C6;
+    border-radius: 1em;
+    border: none;
+    margin: .5em;
+    width: 0em;
+}
+
 .lunchHeader {
     text-align: center;
 }

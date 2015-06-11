@@ -13,17 +13,17 @@ Walker Flieller
 
 
 Photo album including user stories, ERDs, and wireframes:
-	http://s288.photobucket.com/user/cregensburger/library/app-etite%20work
+	<ul><li>http://s288.photobucket.com/user/cregensburger/library/app-etite%20work</li></ul>
 
 
 To use:
-	<ul>
-		<li>1. git clone SHH</li>
-		<li>2. bundle install</li>
-		<li>3. rake db:create</li>
-		<li>4. rake db:migrate</li>
-		<li>5. rails s</li>
-	</ul>
+	<ol>
+		<li>git clone SHH</li>
+		<li>bundle install</li>
+		<li>rake db:create</li>
+		<li>rake db:migrate</li>
+		<li>rails s</li>
+	</ol>
 
 
 Find us on Twitter and Facebook!

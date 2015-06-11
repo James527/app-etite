@@ -1,9 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 before_filter :configure_sign_up_params, only: [:create]
 before_filter :configure_account_update_params, only: [:update]
-def after_sign_up_path_for(resource)
-  redirect_to new_profile_path
-end
+
 
   # GET /resource/sign_up
   def new
@@ -13,7 +11,7 @@ end
   # POST /resource
   def create
     super
-
+    
   end
 
   # GET /resource/edit

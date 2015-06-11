@@ -90,7 +90,7 @@ def set_profile
 end
 
  def profile_params
-  params.require(:profile).permit(:first_name, :last_name)
+  params.require(:profile).permit(:first_name, :last_name).merge(:user_id => current_user.id)
 end
 end
 

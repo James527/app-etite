@@ -67,7 +67,9 @@
           
           <% if current_user != nil %>
           <li class= "animate hinge"><%= link_to "Home Page", root_path %></li>
-          <li class= "animate hinge"><%= link_to "Profile", current_user.profile %>
+              
+          <li class= "animate hinge"><%= link_to "Profile", new_profile_path %>
+            
           <li class= "animate hinge"><%= link_to "Create Lunch", new_lunch_path %></li></li>
           <li class= "animate hinge"><%= link_to "Log Out", destroy_user_session_path %></li>
           <% else %>

@@ -30,6 +30,7 @@ def new
   format.html # new.html.erb
   format.json { render json: @profile }
  end
+
 end
 
 # GET /profiles/1/edit
@@ -40,7 +41,7 @@ end
 # POST /profiles
 # POST /profiles.json
 def create
-  @profile = Profile.new(params[:profile])
+  @profile = Profile.new(profile_params)
 
 respond_to do |format|
   if @profile.save
@@ -58,15 +59,16 @@ end
 def update
  @profile = Profile.find(params[:id])
 
- respond_to do |format|
-   if @profile.update_attributes(params[:profile])
-     format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
-     format.json { head :no_content }
-   else
-     format.html { render action: "edit" }
-     format.json { render json: @profile.errors, status: :unprocessable_entity }
-   end
- end
+    respond_to do |format|
+      if @profile.update(profile_params)
+        format.html { redirect_to @profile, notice: 'Your profile was successfully updated.'}
+        format.json { render :show, status: :ok, location: @lunch }
+      else
+        format.html {render :edit}
+        format.json {render json: @profile.errors, status: :unprocessable_entity }
+        render 'edit'
+      end
+    end
 end
 
 # DELETE /profiles/1
@@ -80,4 +82,13 @@ def destroy
     format.json { head :no_content }
   end
  end
+ private 
+ def profile_params
+  params.require(:profile).permit(:first_name, :last_name)
 end
+end
+
+
+
+
+

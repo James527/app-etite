@@ -1,23 +1,16 @@
 <p id="notice"></p> 
-
-	<p id="notice"><%= notice %></p>
-
-	<strong>Name:</strong>
-	<%= %>
-</p>
-
+<p id="notice"><%= notice %></p>
 <p>
-	<strong>Rank:</strong>
-	<%= @lunch.rank %>
-</p>
-
-<p>
-	<strong>Lunch type:</strong>
-	<%= @lunch.food_type %>
+  <strong>Lunch type:</strong>
+  <%= @lunch.food_type %>
 </p>
 <p>
-	<strong>User:</strong>
-	<%=  %>
+  <strong>Rank:</strong>
+  <%= @lunch.rank %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= @lunch.user.email %>
 </p>
 
 <h2>Comments</h2>

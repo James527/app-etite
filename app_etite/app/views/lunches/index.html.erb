@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th class="lunchHeader"> Lunch Type   </th>
       <th class="lunchHeader"> Rank   </th>
+      <th class="lunchHeader"> Lunch Type   </th>
       <th colspan="1"></th>
       <th class="lunchHeader"> User</th>
       <th colspan="1"></th>
@@ -17,8 +17,8 @@
   <tbody>
     <% @lunches.each do |lunch| %>
       <tr>
-        <td class="insideLunch"><strong><%= lunch.food_type %></td> </strong>
-        <td class="insideLunch"><%= lunch.rank %></td>       
+        <td class="insideLunch"><%= lunch.rank %></td>    
+        <td class="insideLunch"><strong><%= lunch.food_type %></td> </strong>   
         <td id="ranker" class="insideLunch">
          
           <div class="upVote"><%= button_to "➜", {:controller => :lunches, :action => :upvote, :id => lunch} %></div>

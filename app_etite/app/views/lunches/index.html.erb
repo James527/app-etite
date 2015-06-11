@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Lunches</h1>
+<hr>
 
 <table>
   <thead>
@@ -21,7 +22,7 @@
         <td class="insideLunch"><strong><%= lunch.food_type %></td> </strong>   
         <td id="ranker" class="insideLunch">
          
-          <div class="upVote"><%= button_to "➜", {:controller => :lunches, :action => :upvote, :id => lunch, disable_with: :upvote} %></div>
+          <div class="upVote"><%= button_to "➜", {:controller => :lunches, :action => :upvote, :id => lunch, disable_with: "Processing..."} %></div>
           <div class="downVote"><%= button_to "➜", {:controller => :lunches, :action => :downvote, :id => lunch} %></div>
         </td>
         <td class="insideLunch"><%= lunch.user.profile.first_name %></td>

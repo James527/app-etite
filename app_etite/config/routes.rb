@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-
-  resources :lunches 
-
   resources :users
-  
+  resources :comments
+
   resources :lunches do
-    resources :comments
+    
     member do
       put 'like', to: "lunches#upvote"
       put 'dislike', to: 'lunches#downvote'

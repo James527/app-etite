@@ -29,18 +29,7 @@ before_action :authenticate_user!
   end
 
   def edit
-  end
-
-  def upvote
-    @lunch.rank += 1
-    @lunch.save
-    redirect_to(lunches_path)
-  end
-
-  def downvote
-    @lunch.rank -= 1
-    @lunch.save
-    redirect_to(lunches_path)
+  
   end
 
 	def create
@@ -88,13 +77,6 @@ def set_lunch
 end
 
 def lunch_params
-<<<<<<< HEAD
-
   params.require(:lunch).permit(:food_type, :rank).merge(:user_id => current_user.id)
-
-
-=======
-  params.require(:lunch).permit(:food_type, :rank, :user_id)
->>>>>>> c7c2367b86580e6f32111110c85da704f14e5f24
 end
 end

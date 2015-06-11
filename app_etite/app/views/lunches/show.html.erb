@@ -8,32 +8,50 @@
 
 <p>
 	<strong>Rank:</strong>
-	<%= @lunch.current_user.rank %>
+	<%= @lunch.rank %>
 </p>
 
 <p>
 	<strong>Lunch type:</strong>
 	<%= @lunch.food_type %>
 </p>
-<p>
-	<strong>User:</strong>
-	<%=  %>
-</p>
+
 
 <h2>Comments</h2>
 <%= render @lunch.comments %>
 
 <h2>Add a comment:</h2>
 <%= form_for([@lunch, @lunch.comments.build]) do |f| %>
-  <p>
+<p>
     <%= f.label :text %><br>
     <%= f.text_field :text %>
-  </p>
-  <p>
+</p>
+<p>
     <%= f.submit %>
-  </p>
+</p>
 <% end %>
-
+    <div class="link row clearfix">
+    <% @lunches.each do |lunch| %>
+      <tr>
+        <td><%= lunch.food_type %></td>        
+        <td><%= lunch.rank %></td><span> upvote</span> <span>downvote</span>
+        <td>
+          <%= link_to like_lunch_path(@lunch), method: :put, class: "btn btn-default btn-sm" do %>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+          Upvote
+          <%= lunch.get_upvote.size %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to dislike_lunch_path(@lunch), method: :put, class: "btn btn-default btn-sm" do %>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+          Downvote
+          <%= lunch.get_downvote.size %>
+          <% end %>
+        </td>
+       </tr>
+       <% end %>
+	</div>
 
 <%= link_to 'Edit', edit_lunch_path(@lunch) %> |
 <%= link_to 'Show List', lunches_path %> | 

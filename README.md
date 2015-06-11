@@ -10,3 +10,21 @@ Alwan Mortada
 Courtney Regensburger
 
 Walker Flieller
+
+
+Photo album including user stories, ERDs, and wireframes:
+	http://s288.photobucket.com/user/cregensburger/library/app-etite%20work
+
+
+To use:
+	1. git clone SHH
+	2. bundle install
+	3. rake db:create
+	4. rake db:migrate
+	5. rails s
+
+
+Find us on Twitter and Facebook!
+	https://twitter.com/App_etite_team
+
+	https://www.facebook.com/groups/1586678871606739/

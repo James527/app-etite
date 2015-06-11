@@ -74,6 +74,6 @@ def set_lunch
 end
 
 def lunch_params
-  params.require(:lunch).permit(:food_type).merge(:rank => 0, :user_id => current_user.id, :profile => current_user.profile)
+  params.require(:lunch).permit(:food_type).merge(:rank => 0, :user_id => current_user.id)
 end
 end

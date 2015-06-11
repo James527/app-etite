@@ -28,9 +28,9 @@
 <% end %>
 
 <% if @lunch.user_id == current_user.id || current_user.admin == true %>
-<%= link_to 'Edit', edit_lunch_path(@lunch) %> |
-<%= link_to 'Show List', lunches_path %> | 
+  <%= link_to 'Edit', edit_lunch_path(@lunch) %> |
+  <%= link_to 'Show List', lunches_path %> | 
 <% else %>
-<%= link_to 'Show List', lunches_path %>
+  <%= link_to 'Show List', lunches_path %>
 <% end %>
 

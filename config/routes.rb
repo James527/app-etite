@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :lunches 
   resources :users
   resources :profiles
-  resources :about
   
   resources :lunches do
     resources :comments

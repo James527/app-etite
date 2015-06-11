@@ -65,16 +65,16 @@
       </div>
       <nav>
         <ul class="nav navbar-nav navbar-center" id="topNav">
-          <li class= "animate hinge"><%= link_to "Home Page", root_path %></li>
-          <li class= "animate hinge"><%= link_to "Create Lunch", new_lunch_path %></li>
-
+          
           <% if current_user != nil %>
-          <li class= "animate hinge"><%= link_to "Profile", current_user.profile %></li>
+          <li class= "animate hinge"><%= link_to "Home Page", root_path %></li>
+          <li class= "animate hinge"><%= link_to "Profile", current_user.profile %>
+          <li class= "animate hinge"><%= link_to "Create Lunch", new_lunch_path %></li></li>
           <li class= "animate hinge"><%= link_to "Log Out", destroy_user_session_path %></li>
           <% else %>
           <li class= "animate hinge"><%= link_to "Log in",  new_user_session_path %></li>
           <li class= "animate hinge"><%= link_to "Register", new_user_registration_path %></li>
-          <li class= "animate hinge"><%= link_to "Log Out", destroy_user_session_path %></li>
+          
           <% end %>
 
         </ul> 

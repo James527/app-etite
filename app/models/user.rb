@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	User.connection
+	# User.connection
 has_many :comments
 has_many :lunches	
 has_one :profile

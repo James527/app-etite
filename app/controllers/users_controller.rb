@@ -4,9 +4,15 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
+		if current_user.admin == true
+			users_path
+		else
+			redirect_to lunches_path
+		end
 	end
 
 	def show
+
 	end
 
 	def edit

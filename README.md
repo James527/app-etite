@@ -6,13 +6,13 @@ This would be a simple CRUD app designed for teams, classmates and different soc
 
 # development team
 
-James Rutledge (github.com/jmz527)
+James Rutledge (http://github.com/jmz527)
 
-Alwan Mortada (github.com/TheeGrassHopper)
+Alwan Mortada (http://github.com/TheeGrassHopper)
 
-Courtney Regensburger (github.com/Cregensburger)
+Courtney Regensburger (http://github.com/Cregensburger)
 
-Walker Flieller (github.com/wflieller)
+Walker Flieller (http://github.com/wflieller)
 
 
 Photo album including user stories, ERDs, and wireframes:

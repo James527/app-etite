@@ -12,10 +12,8 @@
   <strong>User:</strong>
   <%= @lunch.user.email %>
 </p>
-
 <h2>Comments</h2>
 <%= render @lunch.comments %>
-
 <h2>Add a comment:</h2>
 <%= form_for([@lunch, @lunch.comments.build]) do |f| %>
   <p>
@@ -26,11 +24,9 @@
     <%= f.submit %>
   </p>
 <% end %>
-
 <% if @lunch.user_id == current_user.id || current_user.admin == true %>
   <%= link_to 'Edit', edit_lunch_path(@lunch) %> |
   <%= link_to 'Show List', lunches_path %> | 
 <% else %>
   <%= link_to 'Show List', lunches_path %>
 <% end %>
-

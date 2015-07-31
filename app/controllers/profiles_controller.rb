@@ -33,7 +33,6 @@ def new
   format.html # new.html.erb
   format.json { render json: @profile }
  end
-
 end
 
 # GET /profiles/1/edit
@@ -76,25 +75,22 @@ end
 
 # DELETE /profiles/1
 # DELETE /profiles/1.json
-def destroy
-  @profile.destroy
+  def destroy
+    @profile.destroy
 
-  respond_to do |format|
+    respond_to do |format|
     format.html { redirect_to profiles_url }
     format.json { head :no_content }
   end
- end
- private 
-def set_profile
-  @profile = Profile.find(params[:id])
+  end # <-- Is this supposed to be here?
+
+  private
+
+  def set_profile
+    @profile = Profile.find(params[:id])
+  end
+
+  def profile_params
+    params.require(:profile).permit(:first_name, :last_name).merge(:user_id => current_user.id)
+  end
 end
-
- def profile_params
-  params.require(:profile).permit(:first_name, :last_name).merge(:user_id => current_user.id)
-end
-end
-
-
-
-
-

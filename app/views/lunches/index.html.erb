@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 <% if current_user.profile = nil %>
-<% redirect_to new_profile_path %>
+  <% redirect_to new_profile_path %>
 <% else %>
 <h1>Lunches</h1>
 <hr>
-
 <table>
   <thead>
     <tr>
@@ -16,33 +15,25 @@
       <th class="lunchHeader"> Tools</th>
     </tr>
   </thead>
-
   <tbody>
     <% @lunches.each do |lunch| %>
       <tr>
         <td class="insideLunch"><%= lunch.rank %></td>    
         <td class="insideLunch"><strong><%= lunch.food_type %></td> </strong>   
         <td id="ranker" class="insideLunch">
-         
           <div class="upVote"><%= button_to "➜", {:controller => :lunches, :action => :upvote, :id => lunch, disable_with: "Processing..."} %></div>
           <div class="downVote"><%= button_to "➜", {:controller => :lunches, :action => :downvote, :id => lunch} %></div>
         </td>
-
         <td class="insideLunch"><%= lunch.user.email %></td>
         <td class="insideLunch"><%= link_to 'Show', lunch %></td>
         <td class="insideLunch"><%= link_to 'Edit', edit_lunch_path(lunch) %></td>
         <% if current_user.admin %>
         <td class="insideLunch"><%= link_to 'Destroy', {:controller=>:lunches,:action=>:destroy, :id=>lunch}, :method=>:delete %></td>
         <% end %>
-      
       </tr>
-
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New lunch', new_lunch_path %>
-
 <% end %>

@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 	before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-
 	def index
 		@users = User.all
 		if current_user.admin == true
@@ -28,7 +27,6 @@ class UsersController < ApplicationController
   		end
 	end
 
-
 	def destroy
 		@user.destroy
 	    respond_to do |format|
@@ -45,5 +43,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:id, :email, :password)
     end
-
 end

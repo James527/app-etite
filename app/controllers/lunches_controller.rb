@@ -2,7 +2,6 @@ class LunchesController < ApplicationController
 before_action :set_lunch, only: [:show, :upvote, :downvote, :edit, :update, :destroy]
 before_action :authenticate_user!
 
-
   def index
     @lunches = Lunch.order("rank DESC").all
   end
@@ -56,11 +55,6 @@ def update
 end
 
 def destroy
-  # Lunch.find(params[:id]).destroy_all
-  #   respond_to do |format|
-  #    format.html { redirect_to lunches_url, notice: 'Lunch was successfully destroyed.' }
-  #    format.json { head :no_content }
-  # end
   @lunch.destroy_lunch(params[:id])
    respond_to do |format|
      format.html { redirect_to lunches_url, notice: 'Lunch was successfully destroyed.' }
@@ -69,6 +63,7 @@ def destroy
 end
  
 private
+
 def set_lunch
   @lunch = Lunch.find(params[:id])
 end
@@ -76,4 +71,5 @@ end
 def lunch_params
   params.require(:lunch).permit(:food_type).merge(:rank => 0, :user_id => current_user.id)
 end
-end
+
+end # <-- Again, we have an extra end???
